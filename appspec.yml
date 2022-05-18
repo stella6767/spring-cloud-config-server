@@ -7,7 +7,7 @@ os: linux
 
 files:
   - source:  /
-    destination: /home/ubntu/action
+    destination: /home/ubuntu/action
     overwrite: yes
 
 
