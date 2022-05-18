@@ -27,12 +27,20 @@ permissions:
 #runas (optional): 스크립트를 실행하는 사용자
 
 
+#hooks:
+#  AfterInstall:  # 파일이 도착 후 실행
+#    - location: scripts/stop.sh
+#      timeout: 60
+#      runas: root
+#  ApplicationStart:
+#    - location: scripts/start.sh
+#      timeout: 60
+#      runas: root
+
+
 hooks:
-  AfterInstall:  # 파일이 도착 후 실행
-    - location: scripts/stop.sh
-      timeout: 60
-      runas: root
-  ApplicationStart:
-    - location: scripts/start.sh
+  AfterInstall:
+    # location은 프로젝트의 root경로를 기준
+    - location: deploy.sh
       timeout: 60
       runas: root
