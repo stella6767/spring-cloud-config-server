@@ -43,4 +43,4 @@ hooks:
     # location은 프로젝트의 root경로를 기준
     - location: scripts/deploy.sh
       timeout: 60
-      runas: ubuntu
+      runas: root
