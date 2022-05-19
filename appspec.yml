@@ -26,7 +26,7 @@ permissions:
 #timeout (optional): 스크립트 실행에 허용되는 최대 시간이며, 넘으면 배포 실패로 간주됨
 #runas (optional): 스크립트를 실행하는 사용자
 
-# ???? 
+# ????
 
 #hooks:
 #  AfterInstall:  # 파일이 도착 후 실행 lamda function
@@ -42,6 +42,6 @@ permissions:
 hooks:
   AfterInstall:
     # location은 프로젝트의 root경로를 기준
-    - location: scripts/deploy.sh
+    - location: start.sh
       timeout: 60
       runas: root
